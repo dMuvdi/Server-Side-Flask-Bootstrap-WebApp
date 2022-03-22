@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Document Form</h1>
+    <p>Enter your Document info:   </p>
+        <br>
+            <form action="/document_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">ID</span>
+                    <input type="text" class="form-control" name="id_doc" aria-label="Sizing example input" aria-describedby="inputGroup_iddoc">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_name">Title</span>
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_title">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Number of Pages</span>
+                    <input type="text" class="form-control" name="pag_num" aria-label="Sizing example input" aria-describedby="inputGroup_pag_num">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Category</span>
+                    <select type="text" class="form-control" name="categ" aria-label="Sizing example input" aria-describedby="inputGroup_categ">
+                        <option value="None">- Select Category -</option>
+                        <option value="Suspense">Drama</option>
+                        <option value="Science-Fiction">Science-Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Poetry">Poetry</option>
+                        <option value="Romance">Romance</option>
+                      </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Author ID</span>
+                    <input type="text" class="form-control" name="id_person" aria-label="Sizing example input" aria-describedby="inputGroup_author_id">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Author Name</span>
+                    <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup_author_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Author Last Name</span>
+                    <input type="text" class="form-control" name="last_name" aria-label="Sizing example input" aria-describedby="inputGroup_author_last_name">
+                </div>
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}
